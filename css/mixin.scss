@@ -1,0 +1,13 @@
+@mixin container{
+    width: 1170px;
+    margin: 0 auto;
+    // border: 1px solid black;
+}
+
+@mixin padding-l{
+    padding-left:20px;
+}
+
+@mixin color($color){
+    background-color: $color;
+}

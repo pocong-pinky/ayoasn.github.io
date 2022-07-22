@@ -1,0 +1,152 @@
+@import "mixin";
+
+
+*{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    display: block;
+    background-color: #F8F8F8;
+}
+main{
+    position: absolute;
+    align-items: center;
+    .main-wrapper{
+        display: block;
+        padding-top: 150px;
+        padding-bottom: 150px;   
+        height:auto;
+        background-image: url('/assets/img/bg.svg');
+        background-size: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .container{
+            @include container;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 24px;
+            padding-top: 24px;
+            .main-left{
+                text-align:left;
+                margin-top: 48px;
+                padding: 0 20px;
+                .main-left-header{
+                    @include padding-l;
+                    padding-bottom: 12px;
+                    h1{ 
+                        font-weight:bolder;
+                    }
+                }
+                .main-left-p{
+                    @include padding-l;
+                    padding-bottom: 24px;
+                }
+    
+                a.register-button{
+                    margin-left: 20px;
+                    padding: 12px 36px;
+                    text-align: center;
+                    background-color: #A17B4E;
+                    color: rgba($color: white, $alpha: 0.8);
+                    font-weight: bolder;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px black;
+                }
+    
+                a.register-button:active{
+                    position:relative;
+                    top:4px;
+                    box-shadow: none;
+                }
+            }
+            .main-right{
+                img{
+                    width:700px;
+                    height:300px;
+                }
+    
+            }
+        }
+    
+    }
+
+    .feature-wrapper{
+        display: block;
+        padding-top: 48px;
+        .container{
+            @include container;
+            .feature-title{
+                padding-top: 24px;
+                padding-bottom: 12px;
+                border-bottom: 2px solid #A17B4E ;
+                text-align: center;
+                h2{
+                    font-weight: bolder;
+                }
+            }
+
+            .feature{
+                width:100%;
+                padding-top: 48px;
+                padding-bottom: 24px;
+                display: flex;
+                flex-wrap: wrap;
+                .feature-card{
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    width:30%;
+                    margin: 0 auto;
+                    text-align:center;
+                    .image-card{
+                        padding-top: 240px;
+                        margin: 0 auto;
+                        background-color: red;
+                        width: 70%;
+                    }
+
+                    .card-1{
+                        @include color(red)
+                    }
+
+                    .card-2{
+                        @include color(grey)
+                    }
+
+                    .card-3{
+                        @include color(lightblue)
+                    }
+
+                    .card-4{
+                        @include color(rgb(8, 80, 24))
+                    }
+
+                    .card-5{
+                        @include color(rgb(218, 14, 113))
+                    }
+
+                    .card-6{
+                        @include color(rgb(210, 191, 47))
+                    }
+
+                    h3{
+                        padding-top: 24px;
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+
+                    p{
+                        padding-top: 24px;
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
